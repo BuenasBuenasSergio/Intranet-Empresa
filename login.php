@@ -89,17 +89,17 @@ include("conexion.php");
                                 <i class="icon far fa-user"></i>
                             </div><!--//icon-holder-->
                             <h3 class="title">Login</h3>
-                            <form name="login" method="POST" action="conexionLogion.php">
+                            <form name="login" method="POST" action="conexionLogin.php">
                                  <div class="form-group row">
                                     <label for="inputEmail3" class="col-sm-2 form-control-label">Usuario</label>
                                     <div class="col-sm-10">
-                                         <input type="text" class="form-control" id="inputEmail3" placeholder="usuario">
+                                         <input type="text" class="form-control" name="user" id="inputEmail3" placeholder="usuario">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="inputPassword3" class="col-sm-2 form-control-label">Contraseña</label>
                                     <div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3" placeholder="contraseña">
+                                        <input type="password" class="form-control" name="pass" id="inputPassword3" placeholder="contraseña">
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-info">Iniciar Sesion</button>

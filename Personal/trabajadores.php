@@ -47,7 +47,6 @@
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title">Trabajadores</h1>
-                    <input class="btn btn-primary" type="button" value="Nuevo Trabajador">
                 </div><!--//doc-header-->
                 <div class="doc-body row">
                     <div class="doc-content col-md-9 col-12 order-1">

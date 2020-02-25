@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+include("../conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,46 +54,87 @@
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title">Nuevo Trabajador</h1>
                 </div><!--//doc-header-->
-                <div class="doc-body row" >
+                <div class="doc-body row justify-content-md-center" >
                     <div class="doc-content col-md-9 col-12 order-1">
                         <div class="content-inner">
                             <section id="dashboards" class="doc-section">
                                 <div class="section-block">
-                                    <form>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 form-control-label">Nombre</label>
+                                    <form name="alta" method="POST" action="altaTrabajador.php">
+                                        <div class="form-group row justify-content-md-center">
+                                            <label  class="col-sm-2 form-control-label">Nombre</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail3" placeholder="Nombre">
+                                                <input type="text" class="form-control" name="nombre" placeholder="nombre">
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="inputPassword3" class="col-sm-2 form-control-label">Apellidos</label>
+                                        <div class="form-group row justify-content-md-center">
+                                            <label  class="col-sm-2 form-control-label">Apellidos</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputPassword3" placeholder="Apellidos">
+                                                <input type="text" class="form-control" name="apellidos" placeholder="Apellidos">
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 form-control-label">DNI</label>
+
+                                        <div class="form-group row justify-content-md-center">
+                                            <label  class="col-sm-2 form-control-label">DNI</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail3" placeholder="DNI">
+                                                <input type="text" class="form-control" name="dni" placeholder="DNI">
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 form-control-label">Fecha Nacimiento</label>
+                                        <div class="form-group row justify-content-md-center">
+                                            <label  class="col-sm-2 form-control-label">Telefono</label>
                                             <div class="col-sm-10">
-                                                <input type="date" class="form-control" id="date" placeholder="FecNac">
+                                                <input type="text" class="form-control" name="telefono" placeholder="Numero telefono">
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 form-control-label">Curriculum</label>
+                                        <div class="form-group row justify-content-md-center">
+                                            <label  class="col-sm-2 form-control-label">Puesto</label>
                                             <div class="col-sm-10">
-                                                 <input type="file" id="file" />
+                                                <select class="custom-select" name="puesto">
+                                                    <option selected>Selecciona Un Puesto</option>
+                                                    <?php
+
+                                                        $sql = "SELECT * FROM puestos";
+
+                                                         $registros=mysqli_query($conexion,$sql);
+
+                                                         while ($linea=mysqli_fetch_array($registros)) {
+                                                            echo "
+                                                            <option value='$linea[idPuesto]'>$linea[puesto]</option>";
+                                                         }
+                                                     ?>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row justify-content-md-center">
+                                            <label  class="col-sm-2 form-control-label">Fecha Nacimiento</label>
+                                            <div class="col-sm-10">
+                                                <input type="date" class="form-control" id="date"  name="fecNac" placeholder="FecNac">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row justify-content-md-center">
+                                            <label  class="col-sm-2 form-control-label">Contraseña</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control"  name="pass" placeholder="Contraseña">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row justify-content-md-center">
+                                            <label  class="col-sm-2 form-control-label">Curriculum</label>
+                                            <div class="col-sm-10">
+                                                 <input type="file" id="file" name="curriculum" />
                                                 <span class="file-custom"></span>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <div class="col-sm-offset-2 col-sm-10">
-                                                <button type="submit" class="btn btn-primary">Introducir</button>
+                                        <div class="form-group row justify-content-md-center">
+                                            <label for="inputEmail3" class="col-sm-2 form-control-label">Contrato</label>
+                                            <div class="col-sm-10">
+                                                 <input type="file" id="file" name="contrato" />
+                                                <span class="file-custom"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row justify-content-md-center">
+                                            <div class="col-sm-offset-6 ">
+                                                <button type="submit" class="btn btn-primary">Introducir Nuevo Trabajador</button>
                                             </div>
                                         </div>
                                     </form>

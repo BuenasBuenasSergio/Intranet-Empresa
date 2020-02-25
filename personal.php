@@ -50,14 +50,25 @@
                 <section class="cards-section text-center">
             <div class="container">
                 <div id="cards-wrapper" class="cards-wrapper row">
+
                     <div class="item item-green col-lg-4 col-6">
                         <div class="item-inner">
                             <div class="icon-holder">
                                 <i class="icon fa fa-users"></i>
                             </div><!--//icon-holder-->
-                            <h3 class="title">Trabajadores</h3>
+                            <h3 class="title">Lista de Trabajadores</h3>
                             <p class="intro">Control de Trabajadores</p>
-                            <a class="link" href="Personal/trabajadores.html"><span></span></a>
+                            <a class="link" href="Personal/trabajadores.php"><span></span></a>
+                        </div><!--//item-inner-->
+                    </div><!--//item-->
+                    <div class="item item-primary col-lg-4 col-6">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon fa fa-user-plus"></i>
+                            </div><!--//icon-holder-->
+                            <h3 class="title">Anadir Nuevo Trabajador</h3>
+                            <p class="intro">Anadir nuevo trabajador a la Base de Datos</p>
+                            <a class="link" href="Personal/nuevoTrabajador.php"><span></span></a>
                         </div><!--//item-inner-->
                     </div><!--//item-->
                     <div class="item item-pink item-2 col-lg-4 col-6">
@@ -67,7 +78,7 @@
                             </div><!--//icon-holder-->
                             <h3 class="title">Vacaciones</h3>
                             <p class="intro">Control de Vacaciones</p>
-                            <a class="link" href="Personal/vacaciones.html"><span></span></a>
+                            <a class="link" href="Personal/vacaciones.php"><span></span></a>
                         </div><!--//item-inner-->
                     </div><!--//item-->
                     <div class="item item-blue col-lg-4 col-6">
@@ -78,7 +89,7 @@
                             </div><!--//icon-holder-->
                             <h3 class="title">Partes</h3>
                             <p class="intro">Control de partes de bajas y altas</p>
-                            <a class="link" href="charts.html"><span></span></a>
+                            <a class="link" href="charts.php"><span></span></a>
                         </div><!--//item-inner-->
                     </div><!--//item-->
                     <div class="item item-purple col-lg-4 col-6">
