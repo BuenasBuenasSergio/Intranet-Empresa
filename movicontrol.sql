@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-02-2020 a las 13:47:00
+-- Tiempo de generación: 26-02-2020 a las 13:56:21
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.3.13
 
@@ -94,8 +94,9 @@ CREATE TABLE `trabajadores` (
 --
 
 INSERT INTO `trabajadores` (`dni`, `nombre`, `apellido`, `telefono`, `fecNac`, `password`, `idPuesto`, `curriculum`, `contrato`) VALUES
-('73440250p', 'Sergio', 'Martin-Albo Calvera', '', '1997-08-05', 'sergio15', 1, '', ''),
-('63819287O', 'Mariano', 'Blasco Royo', '673182736', '1988-06-15', '12345', 2, 'PRACTICA WORD 2.docx', 'PRACTICA WORD 1.docx');
+('73440250p', 'Sergio', 'Martin-Albo Calvera', '', '1997-08-05', 'sergio15', 1, 'files/curriculums/pruebaPDF.pdf', ''),
+('63819287O', 'Mariano', 'Blasco Royo', '673182736', '1988-06-15', '12345', 2, 'PRACTICA WORD 2.docx', 'PRACTICA WORD 1.docx'),
+('64827163p', 'Paco', 'Martinez Soria', '975632182', '1988-10-27', '12345', 3, 'pruebaPDF.pdf', 'contratoPrueba.pdf');
 
 --
 -- Índices para tablas volcadas
