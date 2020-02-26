@@ -1,9 +1,3 @@
-<?php
-session_start();
-// Conectamos con mysql
-include("conexion.php");
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,56 +63,16 @@ include("conexion.php");
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
         <!-- ******Header****** -->
-        <header class="header text-center">
-            <div class="container">
-                <div class="branding">
-                    <h1 class="logo">
-                        <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                        <span class="text-highlight">Movi</span><span class="text-bold">Control</span>
-                    </h1>
-                </div><!--//branding-->
-                </div><!--//tagline-->                
-            </div><!--//container-->
-        </header><!--//header-->
-        <section class="cards-section text-center">
-            <div class="container">
-                <div id="cards-wrapper" class="cards-wrapper row">
-                    <div class="item item-blue col-10 offset-1">
-                        <div class="item-inner">
-                            <div class="icon-holder">
-                                <i class="icon far fa-user"></i>
-                            </div><!--//icon-holder-->
-                            <h3 class="title">Login</h3>
-                            <form name="login" method="POST" action="conexionLogin.php">
-                                 <div class="form-group row">
-                                    <label for="inputEmail3" class="col-sm-2 form-control-label">Usuario</label>
-                                    <div class="col-sm-10">
-                                         <input type="text" class="form-control" name="user" id="inputEmail3" placeholder="usuario">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label for="inputPassword3" class="col-sm-2 form-control-label">Contraseña</label>
-                                    <div class="col-sm-10">
-                                        <input type="password" class="form-control" name="pass" id="inputPassword3" placeholder="contraseña">
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-info">Iniciar Sesion</button>
-                            </div>
-                            </form>
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-                </div><!--//cards-->
-            </div><!--//container-->
-        </section><!--//cards-section-->
-        <embed src="pruebaPDF.pdf" type="application/pdf" width="100%" height="600px" />
+        
+
+        <embed src="Personal/files/contratos/contratoPrueba.pdf" type="application/pdf" width="100%" height="100%" />
     <footer class="footer text-center">
         <div class="container">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
             <small class="copyright">Movicontrol </small>
         </div><!--//container-->
     </footer><!--//footer-->
-    
-     
+
     <!-- Main Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
