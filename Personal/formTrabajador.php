@@ -2,6 +2,11 @@
 session_start();
 
 include("../conexion.php");
+
+//si no esta ioniciada la sesion se cambia manda al index
+if ($_SESSION['nombre'] == null) {
+    header("location:../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,9 +46,8 @@ include("../conexion.php");
                     </h1>
                 </div><!--//branding-->
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../principal.html">Pagina Principal</a></li>
-                    <li class="breadcrumb-item"><a href="../personal.html">Personal</a></li>
-                    <li class="breadcrumb-item "><a href="trabajadores.html">Trabajadores</a></li>
+                    <li class="breadcrumb-item"><a href="../principal.php">Pagina Principal</a></li>
+                    <li class="breadcrumb-item"><a href="menuPersonal.php">Personal</a></li>
                     <li class="breadcrumb-item active">Nuevo Trabajador</li>
 
                 </ol>

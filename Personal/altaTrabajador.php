@@ -21,6 +21,6 @@ $sql = "INSERT INTO trabajadores(dni , nombre, apellido,  telefono, fecNac, pass
 mysqli_query($conexion, $sql) or die ("Error en la consulta $sql");
 mysqli_close($conexion);
 
-echo "<SCRIPT>window.open('trabajadores.php','_parent')</SCRIPT>";  
+echo "<SCRIPT>window.open('menuPersonal.php','_parent')</SCRIPT>";  
 
  ?>

@@ -1,15 +1,13 @@
-<?php 
+<?php
 session_start();
+// Conectamos con mysql
+include("conexion.php");
 
-//si no esta ioniciada la sesion se cambia manda al index
-if ($_SESSION['nombre'] == null) {
-    header("location:index.php");
-}
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pagina Principal</title>
+    <title>Login</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,43 +79,37 @@ if ($_SESSION['nombre'] == null) {
                 </div><!--//branding-->
                 </div><!--//tagline-->                
             </div><!--//container-->
-            <?php echo $_SESSION['nombre'] ;
-                  echo $_SESSION['dni'] ;?>
         </header><!--//header-->
         <section class="cards-section text-center">
             <div class="container">
                 <div id="cards-wrapper" class="cards-wrapper row">
-                <?php 
-
-                    include("conexion.php");
-
-                // Creamos la consulta
-                    $sql = "SELECT * FROM secciones ";
-
-                    $registros=mysqli_query($conexion,$sql);
-
-                    $total=mysqli_num_rows($registros);
-
-                    while($linea=mysqli_fetch_array($registros)){
-                        ?>
-                            <div class=" <?php echo $linea['class'] ?> ">
-                                <div class="item-inner">
-                                    <div class="icon-holder">
-                                        <i class="<?php echo $linea['image'] ?>"></i>
-                                    </div><!--//icon-holder-->
-                                    <h3 class="title"><?php echo $linea['seccion'] ?></h3>
-                                     <p class="intro"><?php echo $linea['descripcion'] ?></p>
-                                    <a class="link" href="<?php echo $linea['direccion'] ?>"><span></span></a>
-                                </div><!--//item-inner-->
-                            </div><!--//item-->
-                        <?php 
-                    };
-                    ?>
+                    <div class="item item-blue col-10 offset-1">
+                        <div class="item-inner">
+                            <div class="icon-holder">
+                                <i class="icon far fa-user"></i>
+                            </div><!--//icon-holder-->
+                            <h3 class="title">Login</h3>
+                            <form name="login" method="POST" action="login.php">
+                                 <div class="form-group row">
+                                    <label for="inputEmail3" class="col-sm-2 form-control-label">Usuario</label>
+                                    <div class="col-sm-10">
+                                         <input type="text" class="form-control" name="user" id="inputEmail3" placeholder="usuario">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword3" class="col-sm-2 form-control-label">Contraseña</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="pass" id="inputPassword3" placeholder="contraseña">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-info">Iniciar Sesion</button>
+                            </div>
+                            </form>
+                        </div><!--//item-inner-->
+                    </div><!--//item-->
                 </div><!--//cards-->
             </div><!--//container-->
         </section><!--//cards-section-->
-    
-    
     <footer class="footer text-center">
         <div class="container">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->

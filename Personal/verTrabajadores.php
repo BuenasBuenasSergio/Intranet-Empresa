@@ -2,6 +2,11 @@
 session_start();
 
 include("../conexion.php");
+
+//si no esta ioniciada la sesion se cambia manda al index
+if ($_SESSION['nombre'] == null) {
+    header("location:../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,7 +108,7 @@ include("../conexion.php");
                                                         </a>
                                                     </td>
                                                     <td>
-                                                        <a href="editTrabajador.php?dni=<?php echo $linea['dni'] ?>">
+                                                        <a href="trabajadores/editTrabajador.php?dni=<?php echo $linea['dni'] ?>">
                                                              <div class="icon-holder">
                                                                 <i class="fas fa-user-edit" style="font-size: 20px"></i>
                                                             </div>

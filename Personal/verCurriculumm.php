@@ -4,6 +4,10 @@ session_start();
 include("../conexion.php");
 
 $dni = $_GET['dni'];
+
+if ($_SESSION['nombre'] == null) {
+	header("location:..\index.php");
+}
 ?>
 <?php
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-02-2020 a las 13:56:21
+-- Tiempo de generación: 27-02-2020 a las 13:45:27
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.3.13
 
@@ -65,7 +65,7 @@ CREATE TABLE `secciones` (
 --
 
 INSERT INTO `secciones` (`idSecciones`, `seccion`, `direccion`, `descripcion`, `image`, `class`) VALUES
-(1, 'Personal', 'personal.php', 'Control de Personal', 'icon fa fa-users', 'item item-green col-lg-4 col-6'),
+(1, 'Personal', 'Personal\\menuPersonal.php', 'Control de Personal', 'icon fa fa-users', 'item item-green col-lg-4 col-6'),
 (2, 'Proyectos', 'proyectos.php', 'Control de Proyectos', 'icon fa fa-file', 'item item-pink item-2 col-lg-4 col-6'),
 (3, 'SAT', '', 'Control de servicios tecnicos', 'icon fa fa-tools', 'item item-blue col-lg-4 col-6'),
 (4, 'Noticias', 'noticias.php', 'Las ultimas Noticias de la empresa', 'icon fa fa-newspaper', 'item item-purple col-lg-4 col-6'),
@@ -94,9 +94,15 @@ CREATE TABLE `trabajadores` (
 --
 
 INSERT INTO `trabajadores` (`dni`, `nombre`, `apellido`, `telefono`, `fecNac`, `password`, `idPuesto`, `curriculum`, `contrato`) VALUES
-('73440250p', 'Sergio', 'Martin-Albo Calvera', '', '1997-08-05', 'sergio15', 1, 'files/curriculums/pruebaPDF.pdf', ''),
+('73440250p', 'Sergio', 'Martin-Albo Calvera', '973182734', '1997-08-05', 'sergio15', 1, 'files/curriculums/pruebaPDF.pdf', ''),
 ('63819287O', 'Mariano', 'Blasco Royo', '673182736', '1988-06-15', '12345', 2, 'PRACTICA WORD 2.docx', 'PRACTICA WORD 1.docx'),
-('64827163p', 'Paco', 'Martinez Soria', '975632182', '1988-10-27', '12345', 3, 'pruebaPDF.pdf', 'contratoPrueba.pdf');
+('64827163p', 'Paco', 'Martinez Soria', '975632182', '1988-10-27', '12345', 3, 'pruebaPDF.pdf', 'contratoPrueba.pdf'),
+('12345678p', 'Julia', 'Altozano ', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
+('12345678a', 'Julia', 'Altozano ', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
+('12345678s', 'Julia', 'Altozano ', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
+('12345678r', 'Julia', 'asdasd', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
+('123456781', 'Julia', 'asdasd', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
+('73127384p', 'Antonio', 'maldonado', '837129278', '1979-06-21', '12345', 5, 'pruebaPDF.pdf', 'contratoPrueba.pdf');
 
 --
 -- Índices para tablas volcadas
