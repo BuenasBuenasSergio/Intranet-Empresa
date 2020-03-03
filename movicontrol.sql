@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-02-2020 a las 13:45:27
+-- Tiempo de generación: 03-03-2020 a las 13:06:58
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.3.13
 
@@ -94,15 +94,8 @@ CREATE TABLE `trabajadores` (
 --
 
 INSERT INTO `trabajadores` (`dni`, `nombre`, `apellido`, `telefono`, `fecNac`, `password`, `idPuesto`, `curriculum`, `contrato`) VALUES
-('73440250p', 'Sergio', 'Martin-Albo Calvera', '973182734', '1997-08-05', 'sergio15', 1, 'files/curriculums/pruebaPDF.pdf', ''),
-('63819287O', 'Mariano', 'Blasco Royo', '673182736', '1988-06-15', '12345', 2, 'PRACTICA WORD 2.docx', 'PRACTICA WORD 1.docx'),
-('64827163p', 'Paco', 'Martinez Soria', '975632182', '1988-10-27', '12345', 3, 'pruebaPDF.pdf', 'contratoPrueba.pdf'),
-('12345678p', 'Julia', 'Altozano ', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
-('12345678a', 'Julia', 'Altozano ', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
-('12345678s', 'Julia', 'Altozano ', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
-('12345678r', 'Julia', 'asdasd', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
-('123456781', 'Julia', 'asdasd', '975632182', '1990-06-05', '12345', 4, 'contratoPrueba.pdf', 'pruebaPDF.pdf'),
-('73127384p', 'Antonio', 'maldonado', '837129278', '1979-06-21', '12345', 5, 'pruebaPDF.pdf', 'contratoPrueba.pdf');
+('73440250p', 'Sergio', 'Martin-Albo Calvera', '973182731', '1997-08-28', 'sergio15', 3, 'files/curriculums/curriculum_Sergio_Martin-Albo Calvera.pdf', 'files/contratos/contrato_Sergio_Martin-Albo Calvera.pdf'),
+('12345678p', 'Jorge', 'Martin-Albo Calvera', '975632182', '2002-06-25', '12345', 3, 'files/curriculums/curriculum_Jorge_Martin-Albo Calvera.pdf', 'files/contratos/contrato_Jorge_Martin-Albo Calvera.pdf');
 
 --
 -- Índices para tablas volcadas
