@@ -63,7 +63,7 @@ if ($_SESSION['nombre'] == null) {
                         <div class="content-inner">
                             <section id="dashboards" class="doc-section">
                                 <div class="section-block">
-                                    <form name="alta" method="POST" action="altaTrabajador.php">
+                                    <form name="alta" method="POST" enctype="multipart/form-data" action="altaTrabajador.php">
                                         <div class="form-group row justify-content-md-center">
                                             <label  class="col-sm-2 form-control-label">Nombre</label>
                                             <div class="col-sm-10">

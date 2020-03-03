@@ -99,7 +99,7 @@ if ($_SESSION['nombre'] == null) {
                                                     <td><?php echo $linea['fecNac']; ?></td>
                                                     <td><?php echo $linea['puesto']; ?></td>
                                                     <td><a href="verCurriculumm.php?dni=<?php echo $linea['dni'] ?>">Ver</a></td>
-                                                    <td><?php echo $linea['contrato']; ?></td>
+                                                    <td><a href="verContrato.php?dni=<?php echo $linea['dni']; ?>">Ver</a></td>
                                                     <td>
                                                         <a href="detTrabajador.php?dni=<?php echo $linea['dni'] ?>">
                                                             <div class="icon-holder">
@@ -114,7 +114,7 @@ if ($_SESSION['nombre'] == null) {
                                                             </div>
                                                         </a>
                                                     <td>
-                                                        <a href="delTrabajador.php?dni=<?php echo $linea['dni'] ?>">
+                                                        <a href="trabajadores/delTrabajadorBD.php?dni=<?php echo $linea['dni'] ?>">
                                                             <div class="icon-holder" style="color:red; font-size: 20px">
                                                                 <i class="icon fas fa-user-times"></i>
                                                             </div>

@@ -26,11 +26,12 @@ echo $curriculum ;
 echo $contrato;
 
 //now() para fecha actual.
-//$sql = "INSERT INTO trabajadores(dni , nombre, apellido,  telefono, fecNac, password, idPuesto, curriculum, contrato ) VALUES ('$dni' , '$nombre', '$apellidos', '$telefono', '$fecNac' , '$pass', $puesto, '$curriculum', '$contrato')";
 
-//mysqli_query($conexion, $sql) or die ("Error en la consulta $sql");
-//mysqli_close($conexion);
+$sql = "UPDATE trabajadores SET dni='$dni',nombre='$nombre',apellido='$apellidos',telefono='$telefono',fecNac='$fecNac',password='$pass',idPuesto=$puesto WHERE dni = '$dni'";
 
-//echo "<SCRIPT>window.open('trabajadores.php','_parent')</SCRIPT>";  
+mysqli_query($conexion, $sql) or die ("Error en la consulta $sql");
+mysqli_close($conexion);
+
+echo "<SCRIPT>window.open('../verTrabajadores.php','_parent')</SCRIPT>";  
 
  ?>
