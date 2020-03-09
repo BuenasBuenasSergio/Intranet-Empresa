@@ -69,6 +69,7 @@ include("conexion.php");
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
         <!-- ******Header****** -->
+        <div class="page-wrapper">
         <header class="header text-center">
             <div class="container">
                 <div class="branding">
@@ -76,12 +77,11 @@ include("conexion.php");
                         <span aria-hidden="true" class="icon_documents_alt icon"></span>
                         <span class="text-highlight">Movi</span><span class="text-bold">Control</span>
                     </h1>
-                </div><!--//branding-->
-                </div><!--//tagline-->                
+                </div><!--//branding-->             
             </div><!--//container-->
         </header><!--//header-->
         <section class="cards-section text-center">
-            <div class="container">
+            <div class="container ">
                 <div id="cards-wrapper" class="cards-wrapper row">
                     <div class="item item-blue col-10 offset-1">
                         <div class="item-inner">
@@ -110,6 +110,7 @@ include("conexion.php");
                 </div><!--//cards-->
             </div><!--//container-->
         </section><!--//cards-section-->
+    </div >
     <footer class="footer text-center">
         <div class="container">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->

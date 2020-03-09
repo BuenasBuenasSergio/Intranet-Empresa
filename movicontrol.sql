@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-03-2020 a las 13:06:58
+-- Tiempo de generación: 09-03-2020 a las 13:30:23
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.3.13
 
@@ -95,7 +95,17 @@ CREATE TABLE `trabajadores` (
 
 INSERT INTO `trabajadores` (`dni`, `nombre`, `apellido`, `telefono`, `fecNac`, `password`, `idPuesto`, `curriculum`, `contrato`) VALUES
 ('73440250p', 'Sergio', 'Martin-Albo Calvera', '973182731', '1997-08-28', 'sergio15', 3, 'files/curriculums/curriculum_Sergio_Martin-Albo Calvera.pdf', 'files/contratos/contrato_Sergio_Martin-Albo Calvera.pdf'),
-('12345678p', 'Jorge', 'Martin-Albo Calvera', '975632182', '2002-06-25', '12345', 3, 'files/curriculums/curriculum_Jorge_Martin-Albo Calvera.pdf', 'files/contratos/contrato_Jorge_Martin-Albo Calvera.pdf');
+('730182731', 'Trabajador Ejemplo', 'Apellido Ejemplo', '987654321', '2020-07-09', '12345', 2, 'files/curriculums/curriculum_Trabajador Ejemplo_Apellido Ejemplo.pdf', 'files/contratos/contrato_Trabajador Ejemplo_Apellido Ejemplo.pdf'),
+('12345677', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
+('12345678p', 'Jorge', 'Martin-Albo Calvera', '975632182', '2002-06-25', '12345', 3, 'files/curriculums/curriculum_Jorge_Martin-Albo Calvera.pdf', 'files/contratos/contrato_Jorge_Martin-Albo Calvera.pdf'),
+('73018273U', 'Maria Jesus', 'Calvera Navarro', '987654321', '1992-06-05', '12345', 6, 'files/curriculums/curriculum_Maria Jesus_Calvera Navarro.pdf', 'files/contratos/contrato_Maria Jesus_Calvera Navarro.pdf'),
+('1234567r', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
+('123456tr', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
+('12345ttr', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
+('12345ytr', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
+('1q345ytr', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
+('1q345ctr', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
+('1q345c5r', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', '');
 
 --
 -- Índices para tablas volcadas

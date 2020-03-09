@@ -34,6 +34,7 @@ if ($_SESSION['nombre'] == null) {
 
 <body class="body-green">
         <!-- ******Header****** -->
+        <div class="page-wrapper">
         <header id="header" class="header">
             <div class="container">
                 <div class="branding">
@@ -50,12 +51,13 @@ if ($_SESSION['nombre'] == null) {
                 </ol>
             </div><!--//container-->
         </header><!--//header-->
-        <div class="doc-wrapper">
+        <section class="cards-section text-center">
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><span aria-hidden="true" class="icon fa fa-users"></span> Personal</h1>
                 </div><!--//doc-header-->
-                <section class="cards-section text-center">
+
+                
             <div class="container">
                 <div id="cards-wrapper" class="cards-wrapper row">
 

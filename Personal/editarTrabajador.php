@@ -26,6 +26,7 @@
 
 <body class="body-green">
         <!-- ******Header****** -->
+        <div class="page-wrapper">
         <header id="header" class="header">
             <div class="container">
                 <div class="branding">
@@ -45,7 +46,6 @@
                 </ol>
             </div><!--//container-->
         </header><!--//header-->
-        <div class="doc-wrapper">
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title">Editar Trabajador</h1>

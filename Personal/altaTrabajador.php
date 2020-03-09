@@ -74,11 +74,12 @@ echo "$messageCN";
 //------------------------------------------------------------------//
 
 //now() para fecha actual.
+
 $sql = "INSERT INTO trabajadores(dni , nombre, apellido,  telefono, fecNac, password, idPuesto, curriculum, contrato ) VALUES ('$dni' , '$nombre', '$apellidos', '$telefono', '$fecNac' , '$pass', $puesto, '$dest_path_CURR', '$dest_path_CN')";
 
 mysqli_query($conexion, $sql) or die ("Error en la consulta $sql");
 mysqli_close($conexion);
 
-//echo "<SCRIPT>window.open('menuPersonal.php','_parent')</SCRIPT>";  
+echo "<SCRIPT>window.open('menuPersonal.php','_parent')</SCRIPT>";  
 
  ?>

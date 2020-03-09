@@ -36,6 +36,7 @@ if ($_SESSION['nombre'] == null) {
 
 <body class="body-green">
         <!-- ******Header****** -->
+        <div class="page-wrapper">
         <header id="header" class="header">
             <div class="container">
                 <div class="branding">
@@ -53,7 +54,6 @@ if ($_SESSION['nombre'] == null) {
                 </ol>
             </div><!--//container-->
         </header><!--//header-->
-        <div class="doc-wrapper">
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title">Trabajadores</h1>
@@ -67,9 +67,35 @@ if ($_SESSION['nombre'] == null) {
                                         <!--Recoginedo datos de los empleados-->
                                         <?php
 
-                                             $sql = "SELECT t.nombre,t.apellido,t.dni, t.fecNac, p.puesto, t.curriculum, t.contrato FROM trabajadores as t, puestos as p WHERE t.idPuesto = p.idPuesto";
+                                            $sql = "SELECT t.nombre,t.apellido,t.dni, t.fecNac, p.puesto, t.curriculum, t.contrato FROM trabajadores as t, puestos as p WHERE t.idPuesto = p.idPuesto";
+                                             //PAGINACION PT1________________---------------_________________________
 
-                                              $registros=mysqli_query($conexion,$sql);
+                                            $url = basename($_SERVER ["PHP_SELF"]);
+
+                                            if (isset($_GET['pos']))
+                                            
+                                              $ini=$_GET['pos'];
+                                            
+                                            else
+                                            
+                                              $ini=1;
+
+
+                                            $count="SELECT COUNT(*) FROM trabajadores";
+                                            $limit_end = 5;
+                                            
+                                            $init = ($ini-1) * $limit_end;
+
+                                            $sql .= " LIMIT $init, $limit_end";
+                                            $num = $conexion->query($count);
+
+                                            $x = $num->fetch_array();
+
+                                            $total = ceil($x[0]/$limit_end);
+
+                                            //_______________------------------__________________________----------------
+
+                                            $registros=mysqli_query($conexion,$sql);
 
                                                 
                                          ?>
@@ -90,7 +116,11 @@ if ($_SESSION['nombre'] == null) {
                                         </thead>
                                         <tbody align="center">
                                             <?php  
-                                            while ($linea=mysqli_fetch_array($registros)) {
+                                            //$c = $conexion->query($sql);
+
+                                            while($linea = $registros->fetch_array(MYSQLI_ASSOC)){
+
+                                            //while ($linea=mysqli_fetch_array($registros)) {
                                             ?>
                                                 <tr >
                                                     <td><?php echo $linea['nombre']; ?></td>
@@ -126,6 +156,50 @@ if ($_SESSION['nombre'] == null) {
                                                 ?>
                                         </tbody>
                                     </table>
+                                     <!--numeración de registros [importante] -->
+                                        <?php
+                                          echo "<div >";
+                                          echo "<ul class='pagination'>";
+                                          /****************************************/
+                                          if(($ini - 1) == 0)
+                                          {
+                                            echo "<li class='page-item'><a class='page-link' href='#'>&laquo;</a></li>";
+                                          }
+                                          else
+                                          {
+                                            echo "<li class='page-item'><a class='page-link' href='$url?pos=".($ini-1)."'><b>&laquo;</b></a></li>";
+                                          }
+
+                                          /****************************************/
+
+                                          for($k=1; $k <= $total; $k++)
+                                          {
+                                            if($ini == $k)
+                                            {
+                                              echo "<li class='page-item'><a class='page-link' href='#'><b>".$k."</b></a></li>";
+                                            }
+                                            else
+                                            {
+                                              echo "<li class='page-item'><a class='page-link' href='$url?pos=$k'>".$k."</a></li>";
+                                            }
+                                          }
+
+                                          /****************************************/
+
+                                          if($ini == $total)
+                                          {
+                                            echo "<li class='page-item'><a class='page-link' href='#'>&raquo;</a></li>";
+                                          }
+                                          else
+                                          {
+                                            echo "<li class='page-item'><a class='page-link' href='$url?pos=".($ini+1)."'><b>&raquo;</b></a></li>";
+                                          }
+
+                                          /*******************END*******************/
+                                          echo "</ul>";
+                                          echo "</div>"
+                                        ?>
+
                                     </div>
                                 </div><!--//section-block-->
                             </section><!--//doc-section-->
@@ -133,8 +207,7 @@ if ($_SESSION['nombre'] == null) {
                     </div><!--//doc-content-->
                 </div><!--//doc-body-->              
             </div><!--//container-->
-        </div><!--//doc-wrapper-->
-    
+        </div>
     <footer id="footer" class="footer text-center">
         <div class="container">
             <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
