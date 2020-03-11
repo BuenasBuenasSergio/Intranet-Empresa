@@ -67,32 +67,33 @@ if ($_SESSION['nombre'] == null) {
                                         <!--Recoginedo datos de los empleados-->
                                         <?php
 
-                                            $sql = "SELECT t.nombre,t.apellido,t.dni, t.fecNac, p.puesto, t.curriculum, t.contrato FROM trabajadores as t, puestos as p WHERE t.idPuesto = p.idPuesto";
+                                            $sql = "SELECT t.nombre,t.apellido,t.dni, t.fecNac, p.puesto, t.curriculum, t.contrato FROM trabajadores as t, puestos as p WHERE t.idPuesto = p.idPuesto ORDER BY t.apellido ASC";
                                              //PAGINACION PT1________________---------------_________________________
 
+                                            //direccion de la pagina propia
                                             $url = basename($_SERVER ["PHP_SELF"]);
 
-                                            if (isset($_GET['pos']))
-                                            
+                                            if (isset($_GET['pos'])){
                                               $ini=$_GET['pos'];
-                                            
-                                            else
-                                            
+                                            }
+                                            else{
                                               $ini=1;
-
-
+                                            }
+                                            //cantidad de registros
                                             $count="SELECT COUNT(*) FROM trabajadores";
-                                            $limit_end = 5;
+                                            //cantidad de registros por pagina
+                                            $limit_end = 10;
                                             
+                                            //posicion de inicio al cambiar de pagina
                                             $init = ($ini-1) * $limit_end;
-
+                                            //limitar cantidad de resultados que salen
                                             $sql .= " LIMIT $init, $limit_end";
+                                            
                                             $num = $conexion->query($count);
-
+                                            
                                             $x = $num->fetch_array();
 
                                             $total = ceil($x[0]/$limit_end);
-
                                             //_______________------------------__________________________----------------
 
                                             $registros=mysqli_query($conexion,$sql);
@@ -122,14 +123,14 @@ if ($_SESSION['nombre'] == null) {
 
                                             //while ($linea=mysqli_fetch_array($registros)) {
                                             ?>
-                                                <tr >
+                                                <tr>
                                                     <td><?php echo $linea['nombre']; ?></td>
                                                     <td><?php echo $linea['apellido']; ?></td>
                                                     <td><?php echo $linea['dni']; ?></td>
                                                     <td><?php echo $linea['fecNac']; ?></td>
                                                     <td><?php echo $linea['puesto']; ?></td>
-                                                    <td><a href="verCurriculumm.php?dni=<?php echo $linea['dni'] ?>">Ver</a></td>
-                                                    <td><a href="verContrato.php?dni=<?php echo $linea['dni']; ?>">Ver</a></td>
+                                                    <td><a href="verCurriculumm.php?dni=<?php echo $linea['dni']?>">Ver</a></td>
+                                                    <td><a href="verContrato.php?dni=<?php echo $linea['dni'] ?>">Ver</a></td>
                                                     <td>
                                                         <a href="detTrabajador.php?dni=<?php echo $linea['dni'] ?>">
                                                             <div class="icon-holder">
@@ -194,7 +195,6 @@ if ($_SESSION['nombre'] == null) {
                                           {
                                             echo "<li class='page-item'><a class='page-link' href='$url?pos=".($ini+1)."'><b>&raquo;</b></a></li>";
                                           }
-
                                           /*******************END*******************/
                                           echo "</ul>";
                                           echo "</div>"
