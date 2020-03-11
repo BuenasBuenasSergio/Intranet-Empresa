@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-03-2020 a las 13:30:23
+-- Tiempo de generación: 11-03-2020 a las 13:54:03
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.3.13
 
@@ -95,7 +95,7 @@ CREATE TABLE `trabajadores` (
 
 INSERT INTO `trabajadores` (`dni`, `nombre`, `apellido`, `telefono`, `fecNac`, `password`, `idPuesto`, `curriculum`, `contrato`) VALUES
 ('73440250p', 'Sergio', 'Martin-Albo Calvera', '973182731', '1997-08-28', 'sergio15', 3, 'files/curriculums/curriculum_Sergio_Martin-Albo Calvera.pdf', 'files/contratos/contrato_Sergio_Martin-Albo Calvera.pdf'),
-('730182731', 'Trabajador Ejemplo', 'Apellido Ejemplo', '987654321', '2020-07-09', '12345', 2, 'files/curriculums/curriculum_Trabajador Ejemplo_Apellido Ejemplo.pdf', 'files/contratos/contrato_Trabajador Ejemplo_Apellido Ejemplo.pdf'),
+('730182731', 'Francisco', 'Franco', '987654321', '1936-07-09', '12345', 2, 'files/curriculums/curriculum_Trabajador Ejemplo_Apellido Ejemplo.pdf', 'files/contratos/contrato_Trabajador Ejemplo_Apellido Ejemplo.pdf'),
 ('12345677', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
 ('12345678p', 'Jorge', 'Martin-Albo Calvera', '975632182', '2002-06-25', '12345', 3, 'files/curriculums/curriculum_Jorge_Martin-Albo Calvera.pdf', 'files/contratos/contrato_Jorge_Martin-Albo Calvera.pdf'),
 ('73018273U', 'Maria Jesus', 'Calvera Navarro', '987654321', '1992-06-05', '12345', 6, 'files/curriculums/curriculum_Maria Jesus_Calvera Navarro.pdf', 'files/contratos/contrato_Maria Jesus_Calvera Navarro.pdf'),
@@ -105,7 +105,16 @@ INSERT INTO `trabajadores` (`dni`, `nombre`, `apellido`, `telefono`, `fecNac`, `
 ('12345ytr', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
 ('1q345ytr', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
 ('1q345ctr', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
-('1q345c5r', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', '');
+('1q345c5r', '123123', '1231232', '12312312', '1997-08-05', '1234', 3, '', ''),
+('63819287O', 'Mariano', 'Blasco Royo', '973182731', '1965-08-23', '1234', 6, 'files/curriculums/curriculum_Mariano_Blasco Royo.pdf', 'files/contratos/contrato_Mariano_Blasco Royo.pdf'),
+('12345678q', 'Sigmundo', 'Alvarado Martinez Fernandez 3º', '987654321', '1985-02-13', '12345', 1, 'files/curriculums/curriculum_Sigmundo_Alvarado Martinez.pdf', 'files/contratos/contrato_Sigmundo_Alvarado Martinez.pdf'),
+('1234412', 'maria', 'Paquez', '973182731', '2020-03-17', '12345', 3, 'files/curriculums/curriculum_maria_Paquez.pdf', 'files/contratos/contrato_maria_Paquez.pdf'),
+('8767542r', 'Ernesto', 'Baloncesto', '975632182', '2020-03-26', '45361823', 2, 'files/curriculums/curriculum_Ernesto_Baloncesto.pdf', 'files/contratos/contrato_Ernesto_Baloncesto.pdf'),
+('87675422', 'Ernesto', 'Baloncesto', '975632182', '2020-03-26', '45361823', 2, 'files/curriculums/curriculum_Ernesto_Baloncesto.pdf', 'files/contratos/contrato_Ernesto_Baloncesto.pdf'),
+('87675421', 'Ernesto', 'Baloncesto', '975632182', '2020-03-26', '45361823', 2, 'files/curriculums/curriculum_Ernesto_Baloncesto.pdf', 'files/contratos/contrato_Ernesto_Baloncesto.pdf'),
+('81782363', 'David', 'Causape', '0928370', '1999-08-09', '1234', 1, 'files/curriculums/curriculum_David_Causape.', 'files/contratos/contrato_David_Causape.'),
+('7261517e', 'Tsubasa', 'Ozora', '975632182', '1432-12-21', '12345', 4, 'files/curriculums/curriculum_Tsubasa_Ozora.', 'files/contratos/contrato_Tsubasa_Ozora.'),
+('asdsda', 'Julia', 'Altozano ', '973182731', '1342-04-13', '12345', 4, 'files/curriculums/curriculum_Julia_Altozano .', 'files/contratos/contrato_Julia_Altozano .');
 
 --
 -- Índices para tablas volcadas
